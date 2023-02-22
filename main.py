@@ -16,7 +16,7 @@ def _max_width_():
         unsafe_allow_html=True,
     )
 
-st.set_page_config(page_icon="✂️", page_title="Logo or Not Logo")
+st.set_page_config(page_icon="✂️", page_title="Email Check")
 
 
 c2, c3 = st.columns([6, 1])
@@ -26,7 +26,7 @@ with c2:
     c31, c32 = st.columns([12, 2])
     with c31:
         st.caption("")
-        st.title("Logo or Not Logo")
+        st.title("Email Check")
     with c32:
         st.image(
             "images/logo.png",
@@ -60,16 +60,14 @@ else:
 encode_list = []
 re = RussellIndex()
 
-def find_lookAlikeImages():
+def find_lookAlikeImages(column_name):
 
     for index, rows in df.iterrows():
-        encode_ = re.encode(rows['Email'])
+        encode_ = re.encode(rows[column_name])
         encode_list.append(encode_)
 
     df['Encode-scores'] = encode_list
     duplicates = df[df.duplicated(subset=['Encode-scores'], keep=False)]
-
-
     return duplicates
 
 form = st.form(key="annotation")
