@@ -26,7 +26,7 @@ with c2:
     c31, c32 = st.columns([12, 2])
     with c31:
         st.caption("")
-        st.title("Email Check")
+        st.title("Lookalike record check")
     with c32:
         st.image(
             "images/logo.png",
