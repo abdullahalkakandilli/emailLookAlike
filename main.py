@@ -83,16 +83,16 @@ result = pd.DataFrame()
 if submitted:
 
     result = find_lookAlikeImages(column_name)
+    c29, c30, c31 = st.columns([1, 1, 2])
 
-c29, c30, c31 = st.columns([1, 1, 2])
+    with c29:
+        CSVButton = download_button(
+            result,
+            "FlaggedFile.csv",
+            "Download to CSV",
+        )
 
-with c29:
 
-    CSVButton = download_button(
-        result,
-        "FlaggedFile.csv",
-        "Download to CSV",
-    )
 
 #a = re.encode("nidugrssk@gmail.com")
 #b = re.encode("nida_ugur_sisik@gmail.com")
