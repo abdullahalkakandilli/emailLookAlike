@@ -89,7 +89,7 @@ c29, c30, c31 = st.columns([1, 1, 2])
 with c29:
 
     CSVButton = download_button(
-        df,
+        result,
         "FlaggedFile.csv",
         "Download to CSV",
     )
