@@ -70,18 +70,19 @@ def find_lookAlikeImages(column_name):
     duplicates = df[df.duplicated(subset=['Encode-scores'], keep=False)]
     return duplicates
 
+
 form = st.form(key="annotation")
 with form:
 
-    column_names = st.multiselect(
+    column_name = st.selectbox(
         "Column name:", list(df.columns)
     )
-
     submitted = st.form_submit_button(label="Submit")
-result_df = pd.DataFrame()
+
+
 if submitted:
 
-    result = find_lookAlikeImages(column_names)
+    result = find_lookAlikeImages(column_name)
 
 c29, c30, c31 = st.columns([1, 1, 2])
 
