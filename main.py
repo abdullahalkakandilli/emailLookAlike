@@ -79,7 +79,7 @@ with form:
     )
     submitted = st.form_submit_button(label="Submit")
 
-
+result = pd.DataFrame()
 if submitted:
 
     result = find_lookAlikeImages(column_name)
