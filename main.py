@@ -48,12 +48,16 @@ if uploaded_file is not None:
     file_container.write(df)
 
 
+
+
 else:
     st.info(
         f"""
             👆 Upload a .csv file first. Sample to try: [biostats.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/biostats.csv)
             """
+
     )
+    st.video('https://youtu.be/5rACpMjHBN0')
 
     st.stop()
 
@@ -93,6 +97,10 @@ if submitted:
         )
 
 
+c6, c7, c8 = st.columns([1, 6, 1])
+
+with c7:
+    st.video('https://youtu.be/5rACpMjHBN0')
 
 #a = re.encode("nidugrssk@gmail.com")
 #b = re.encode("nida_ugur_sisik@gmail.com")
